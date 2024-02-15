@@ -1,0 +1,37 @@
+<!-- display.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displayed Text</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS to center content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Displaying Text</h1>
+        <div id="displayText"></div>
+    </div>
+
+    <script>
+        // Retrieve name and YouTube link from query parameters and display them
+        var params = new URLSearchParams(window.location.search);
+        var name = params.get('name');
+        var displayText = document.getElementById('displayText');
+        displayText.innerHTML = "<p>Static Name: Ankit Nagpal</p><p>Input Name: " + name + "</p><p>YouTube Link: " + "https://www.youtube.com/watch?v=1I-FPftp9Ys" + "</p>";
+    </script>
+</body>
+</html>
